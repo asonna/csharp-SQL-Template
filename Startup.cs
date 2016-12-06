@@ -43,6 +43,6 @@ namespace TEMPLATE
 
   public static class DBConfiguration
   {
-      public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=todo;Integrated Security=SSPI;";
-  }
+      public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=ToDo;Integrated Security=SSPI;";
+  } // Change ToDo to your current database name not the directory name else it is the same.
 }

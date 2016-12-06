@@ -1,7 +1,7 @@
 using Xunit;
 using System;
 using System.Collections.Generic;
-using TEMPLATE.Objects;
+using TEMPLATE.Objects; // not always necesssry
 using System.Data;
 using System.Data.SqlClient;
 

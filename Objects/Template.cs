@@ -6,7 +6,7 @@ namespace TEMPLATE.Objects
 {
   public class TEMPLATE_OBJECT
   {
-    // where TEMPLATE_OBJECTId references a property of the object
+    // where TEMPLATE_OBJECTId references the unique key property of the object - replace TEMPLATE_OBJECTId
     public int TEMPLATE_OBJECTId {get; set;}
     public string TEMPLATE_OBJECTDescription {get; set;}
     private List<string> TEMPLATE = new List<string> {};
@@ -17,7 +17,8 @@ namespace TEMPLATE.Objects
       this.TEMPLATEproperty = TEMPLATEuserdata;
     }
 
-    public override bool Equals(System.Object TEMPLATE_OTHER_OBJECT)
+//----------------------------------------------------------------------------------------------------------------------
+    public override bool Equals(System.Object TEMPLATE_OTHER_OBJECT) // Used to overide two identical instance from same class
     {
       if (!(otherTask is Task))
       {
@@ -31,6 +32,11 @@ namespace TEMPLATE.Objects
       }
     }
 
+    public override int GetHashCode() // added to above when comparing objects from two different classes.
+    {
+      return this.Description.GetHashCode();
+    }
+//----------------------------------------------------------------------------------------------------------------------
     public static List<Task> GetAll()
     {
       List<TEMPLATE_OBJECT> TEMPLATE_OBJECT_LIST = new List<TEMPLATE_OBJECT>{};
